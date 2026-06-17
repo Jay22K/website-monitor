@@ -172,10 +172,30 @@ Yahoo                          ONLINE   200
 2. Create an [App Password](https://myaccount.google.com/apppasswords)
 3. Set in `.env`:
    ```
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
    SMTP_USER=you@gmail.com
    SMTP_PASSWORD=your-app-password
+   EMAIL_FROM=you@gmail.com
    EMAIL_TO=recipient@example.com
    ```
+
+### Email Configuration (Mailtrap)
+
+Mailtrap is a great option for testing email delivery without sending real emails to users.
+1. Sign in to [Mailtrap](https://mailtrap.io/) and open an inbox.
+2. Copy the SMTP settings from Mailtrap.
+3. Set in `.env`:
+   ```
+   SMTP_HOST=smtp.mailtrap.io
+   SMTP_PORT=2525
+   SMTP_USER=<your-mailtrap-username>
+   SMTP_PASSWORD=<your-mailtrap-password>
+   EMAIL_FROM=sender@example.com
+   EMAIL_TO=recipient@example.com
+   ```
+
+If Mailtrap is configured, daily reports will be sent to your Mailtrap inbox instead of real email addresses.
 
 ---
 
