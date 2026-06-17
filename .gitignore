@@ -66,8 +66,8 @@ env/
 *.sublime-workspace
 
 # Environment variables
-.env
-.env.*
+
+
 
 # Logs
 logs/
